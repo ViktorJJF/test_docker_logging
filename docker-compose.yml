@@ -11,3 +11,8 @@ services:
       - .:/app
     environment:
       - ENV_VAR=example
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10k"
+        max-file: "3"
